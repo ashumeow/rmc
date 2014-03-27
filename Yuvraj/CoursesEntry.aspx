@@ -9,7 +9,10 @@
     <form id="form1" runat="server">
     <div>
     <b>Course Entry registration form</b> <br /><br />
-    Choose your desired course:-
+    Choose your desired course:- <br />
+    <asp:RadioButton Text="B.tech Electronics and Communication Engineering" runat="server" /> <br />
+    <asp:RadioButton ID="RadioButton1" Text="B.tech Computer Science and Engineering" runat="server" /> <br />
+    <asp:RadioButton ID="RadioButton2" Text="B.tech Information Technology" runat="server" /><br />
     </div>
     </form>
 </body>
