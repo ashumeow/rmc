@@ -1,5 +1,16 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="CoursesEntry.aspx.vb" Inherits="Yuvraj.CoursesEntry" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-</asp:Content>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+<image src=".jpg"></image>
+    <form id="form1" runat="server">
+    <div>
+    <b>Course Entry registration form</b> <br /><br />
+    Choose your desired course:-
+    </div>
+    </form>
+</body>
+</html>
