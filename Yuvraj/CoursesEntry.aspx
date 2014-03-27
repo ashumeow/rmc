@@ -13,6 +13,8 @@
     <asp:RadioButton Text="B.tech Electronics and Communication Engineering" runat="server" /> <br />
     <asp:RadioButton ID="RadioButton1" Text="B.tech Computer Science and Engineering" runat="server" /> <br />
     <asp:RadioButton ID="RadioButton2" Text="B.tech Information Technology" runat="server" /><br />
+    <br/>
+    <asp:Button Text="Submit" runat="server" />
     </div>
     </form>
 </body>
