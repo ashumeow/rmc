@@ -1,0 +1,10 @@
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\bin\Yuvraj.dll
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\bin\Yuvraj.pdb
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\bin\Yuvraj.xml
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\Yuvraj.Resources.resources
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\Yuvraj.dll
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\Yuvraj.xml
+C:\Users\BMC\Documents\Visual Studio 2010\Projects\Yuvraj\Yuvraj\obj\Debug\Yuvraj.pdb

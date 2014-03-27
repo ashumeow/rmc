@@ -1,0 +1,83 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="Yuvraj.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 34px;
+        }
+        .style2
+        {
+            width: 1275px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <table style="width:117%; height: 202px;">
+                <tr>
+                    <td class="style2" style="text-decoration: blink">
+                        &nbsp;
+                        <asp:Image ID="Image1" runat="server" Height="230px" ImageUrl="~/Koala.jpg" 
+                            Width="1306px" />
+                    </td>
+                </tr>
+            </table>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <table style="width:151%; height: 58px;">
+            <tr>
+                <td class="style1">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#6699FF" BorderStyle="Groove" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" 
+                        ForeColor="Blue" ItemWrap="True" Orientation="Horizontal" RenderingMode="Table" 
+                        StaticSubMenuIndent="10px" Width="1303px">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admission.aspx" Text="Admission" Value="Admission">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/FeeStructures.aspx" Text="Fee Structure" 
+                                Value="Fee Structure"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Courses.aspx" Text="Courses" Value="Courses">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Gallery.aspx" Text="Gallery" Value="Gallery">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/About Us.aspx" Text="About" Value="About">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" 
+                                Value="Contact Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Login.aspx" Selected="True" Text="Login" 
+                                Value="Login"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+&nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+    </asp:ContentPlaceHolder>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
