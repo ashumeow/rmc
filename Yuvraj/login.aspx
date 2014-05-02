@@ -1,74 +1,62 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="login.aspx.vb" Inherits="Yuvraj.loginaspx" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-    .style3
-    {
-        width: 257px;
-    }
-    .style4
-    {
-        width: 43px;
-    }
-    .style5
-    {
-        width: 553px;
-    }
-</style>
+<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Account_Login" Async="true" %>
+
+<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <h2><%: Title %>.</h2>
+
+    <div class="row">
+        <div class="col-md-8">
+            <section id="loginForm">
+                <div class="form-horizontal">
+                    <h4>Use a local account to log in.</h4>
+                    <hr />
+                    <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                        <p class="text-danger">
+                            <asp:Literal runat="server" ID="FailureText" />
+                        </p>
+                    </asp:PlaceHolder>
+                    <div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label">User name</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" ID="UserName" CssClass="form-control" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
+                                CssClass="text-danger" ErrorMessage="The user name field is required." />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                <asp:CheckBox runat="server" ID="RememberMe" />
+                                <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register</asp:HyperLink>
+                    if you don't have a local account.
+                </p>
+            </section>
+        </div>
+
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                <uc:openauthproviders runat="server" id="OpenAuthLogin" />
+            </section>
+        </div>
+    </div>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <table style="width: 82%; background-color: #00FFFF; height: 172px;">
-        <tr>
-            <td align="center" colspan="3" 
-                style="text-decoration: blink; font-size: 30px; color: #FF00FF">
-                Login Screen</td>
-        </tr>
-        <tr>
-            <td class="style3">
-                User ID</td>
-            <td class="style4">
-                <asp:TextBox ID="txtusr" runat="server"></asp:TextBox>
-            </td>
-            <td class="style5">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                    ErrorMessage="*Required" ControlToValidate="txtusr" Font-Bold="True" 
-                    ForeColor="#CC0000"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="style3">
-                Password</td>
-            <td class="style4">
-                <asp:TextBox ID="txtpass" runat="server" TextMode="Password"></asp:TextBox>
-            </td>
-            <td class="style5">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                    ErrorMessage="*Required" ControlToValidate="txtpass" Font-Bold="True" 
-                    ForeColor="#CC0000"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td class="style3">
-                Confirm Password</td>
-            <td class="style4">
-                <asp:TextBox ID="txtcpass" runat="server" TextMode="Password"></asp:TextBox>
-            </td>
-            <td class="style5">
-                <asp:CompareValidator ID="CompareValidator1" runat="server" 
-                    ErrorMessage="*Password not matched" ControlToCompare="txtpass" 
-                    ControlToValidate="txtcpass" Font-Bold="True" ForeColor="#CC0000"></asp:CompareValidator>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <asp:Button ID="btnlogin" runat="server" Text="Login" 
-                    style="margin-left: 221px" Width="48px" />
-                <asp:Button ID="btncancel" runat="server" Text="Cancel" 
-                    style="margin-left: 10px" />
-                <asp:Button ID="btnback" runat="server" Text="Back" style="margin-left: 9px" 
-                    Width="55px" />
-            </td>
-            <td class="style5">
-                &nbsp;</td>
-        </tr>
-    </table>
-</asp:Content>
+
