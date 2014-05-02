@@ -5,7 +5,7 @@
     <h3>Contact</h3>
     <address>
         xyz College,<br />
-        Puducherry, India<br />
+        India<br />
         <abbr title="Phone">P:</abbr>
         041399999
     </address>
